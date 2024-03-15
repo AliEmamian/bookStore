@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "7a7605c6-3454-44d7-9330-54aa2f4d97fa",
+		"name": "bookStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4575461",
+		"_collection_link": "https://solar-flare-256827.postman.co/workspace/epanel~49bc7d8c-0fca-4684-a20b-cf43b560305f/collection/4575461-7a7605c6-3454-44d7-9330-54aa2f4d97fa?action=share&source=collection_link&creator=4575461"
+	},
+	"item": [
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "get all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:3000/book"
+					},
+					"response": []
+				},
+				{
+					"name": "get  book by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/book/id?id=65ef5b2b8a6221d245967818",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65ef5b2b8a6221d245967818"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "serach book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/book",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"book"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "asd",
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "1401",
+									"disabled": true
+								},
+								{
+									"key": "author",
+									"value": "agawggw",
+									"disabled": true
+								},
+								{
+									"key": "genre",
+									"value": "assaf",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ffff\",\r\n    \"genre\": \"fsffa\",\r\n    \"price\": \"510000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/book/65ef5b2b8a6221d245967818"
+					},
+					"response": []
+				},
+				{
+					"name": "add book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"wwww\",\r\n    \"genre\":\"fsasad\",\r\n     \"author\": \"agawggw\",\r\n        \"year\": 14201,\r\n        \"price\": 60000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/book"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/user",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "65f1858e98cd10ad5f61ddc2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/user/id?id=65f0bc85612161d531c85922",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65f0bc85612161d531c85922"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get favorites of user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:3000/user/favorites/65f0babb898c89977f5c16c7"
+					},
+					"response": []
+				},
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"agege\",\r\n    \"phone\": \"fsa\",\r\n    \"password\": \"agawggw\",\r\n    \"address\": \"60000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/user"
+					},
+					"response": []
+				},
+				{
+					"name": "update user(add favorite)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"favorites\":[1423]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/user/65f0bc50104e47ae47b73f1f"
+					},
+					"response": []
+				},
+				{
+					"name": "(remove favorites)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"favorites\":[2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/user/favorite/65f0bc50104e47ae47b73f1f"
+					},
+					"response": []
+				},
+				{
+					"name": "update user(change type to premium)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"premium\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/user/65f0babb898c89977f5c16c7"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "purchase",
+			"item": [
+				{
+					"name": "add basket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"65f0bc50104e47ae47b73f1f\",\r\n    \"book\":{\r\n        \"name\": \"ffff\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/purchase"
+					},
+					"response": []
+				},
+				{
+					"name": "remove basket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"65f0babb898c89977f5c16c7\",\r\n    \"book\":{\r\n        \"name\": \"ssss\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:3000/purchase"
+					},
+					"response": []
+				},
+				{
+					"name": "get basket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/purchase?userId=65f0babb898c89977f5c16c7&status=done",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"purchase"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65f0babb898c89977f5c16c7"
+								},
+								{
+									"key": "status",
+									"value": "done"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate payment link",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/purchase/paymentLink?userId=65f0babb898c89977f5c16c7&amount=20000&callbackurl=www.www",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"purchase",
+								"paymentLink"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65f0babb898c89977f5c16c7"
+								},
+								{
+									"key": "amount",
+									"value": "20000"
+								},
+								{
+									"key": "callbackurl",
+									"value": "www.www"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "callbak gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/purchase/callbackUrl?authority=33840607&isOk=true",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"purchase",
+								"callbackUrl"
+							],
+							"query": [
+								{
+									"key": "authority",
+									"value": "33840607"
+								},
+								{
+									"key": "isOk",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
